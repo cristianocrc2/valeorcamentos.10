@@ -1,0 +1,27 @@
+<h1>Listing nichos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nicho</th>
+      <th>Ativo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nichos.each do |nicho| %>
+      <tr>
+        <td><%= nicho.nicho %></td>
+        <td><%= nicho.ativo %></td>
+        <td><%= link_to 'Show', nicho %></td>
+        <td><%= link_to 'Edit', edit_nicho_path(nicho) %></td>
+        <td><%= link_to 'Destroy', nicho, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nicho', new_nicho_path %>

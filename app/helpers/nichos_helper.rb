@@ -1,0 +1,2 @@
+module NichosHelper
+end
